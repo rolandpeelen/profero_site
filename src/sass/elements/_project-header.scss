@@ -1,9 +1,21 @@
 .project-header{
-  height: 250px;
-  padding: 100px 0;
+  height: 150px;
+  padding: 60px 0;
   background-color: $sc-lilia;
   h2{
     text-align: center;
     color: $main-dark;
+  }
+  @media only screen and (min-width: $lap){
+    height: 200px;
+    padding: 82px 0;
+  }
+  @media only screen and (min-width: $desk){
+    height: 220px;
+    padding: 85px 0;
+  }
+  @media only screen and (min-width: $wall){
+    height: 250px;
+    padding: 100px 0;
   }
 }
