@@ -1,0 +1,97 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  font-weight: $btn-font-weight;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid $sc-lilia;
+  white-space: nowrap;
+  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $border-radius-base);
+  @include user-select(none);
+  @include transition(all 0.3s $epic-playful-easing);
+  font-weight: 600;
+
+  &:focus {
+    @include tab-focus();
+  }
+
+  &:hover,
+  &:focus {
+    color: $btn-default-color;
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    outline: 0;
+    background-image: none;
+    @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: not-allowed;
+    pointer-events: none; // Future-proof disabling of clicks
+    @include opacity(.65);
+    @include box-shadow(none);
+  }
+
+  &.prof-btn-primary{
+    @include button-bg($bleau);
+  }
+  &.prof-btn-secondary{
+    @include button-bg($sc-lilia);
+  }
+  &.prof-btn-danger{
+    @include button-bg($danger);
+  }
+  &.prof-btn-warning{
+    @include button-bg($warning);
+  }
+  &.prof-btn-success{
+    @include button-bg($success);
+  }
+  &.bl-disabled{
+    &:hover{
+      @include animation(shake 1s linear);
+      @include button-bg($danger);
+      cursor: not-allowed !important;
+      font-weight: 600;
+      &:before{
+        content: "Whoops - ";
+        font-weight: 400;
+      }
+      &:after{
+        content: " - Is not available :(";
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius-large);
+}
+.btn-sm,
+.btn-xs {
+  // line-height: ensure proper height of button next to small input
+  @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $border-radius-small);
+}
+.btn-xs {
+  padding: 1px 5px;
+}

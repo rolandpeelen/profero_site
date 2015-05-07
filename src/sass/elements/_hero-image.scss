@@ -1,0 +1,33 @@
+.hero-image{
+  width: 100%;
+  height: 100vh;
+  display: block;
+  position:relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: $main-dark;
+  .logo{
+    width: 75%;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    @media only screen and (min-width: $lap){
+      width: 50%;
+    }
+    @media only screen and (min-width: $desk){
+      width: 35%;
+    }
+    @media only screen and (min-width: $wall){
+      width: 25%;
+    }
+  }
+}

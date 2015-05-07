@@ -1,0 +1,76 @@
+.project{
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+  margin-bottom: 50px;
+  .project-image{
+    z-index:0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    filter: grayscale(100%);
+  }
+  .overlay{
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba($main-dark, 0.9);
+    padding: 200px 0px;
+    h2{
+      vertical-align: middle;
+      text-align: center;
+      color: $sc-lilia;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    h4{
+      text-align: center;
+      margin: 20px auto 10px auto;
+      color: #e6eff4;
+      &.bolder{
+        font-weight: 800;
+      }
+    }
+    h6{
+      text-align: center;
+      margin: 0 auto;
+      color: rgba(#e6eff4, 0.5);
+    }
+    .project-info{
+      width: 90%;
+      position: absolute;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      @include transition(all 0.2s $epic-playful-easing);
+    }
+    .open-project-button{
+      position: absolute;
+      top: 400px;
+      left: 0;
+      right: 0;
+      width: 200px;
+      margin: 0 auto;
+    }
+    @media only screen and (min-width: $desk) {
+      .open-project-button{
+        top: 350px;
+        @include opacity(0);
+        @include transform(translateY(40px));
+      }
+
+      &:hover{
+        .project-info{
+          @include opacity(0.5);
+          @include transform(translateY(-60px));
+        }
+        .open-project-button{
+          @include opacity(1);
+          @include transform(translateY(0px));
+        }
+      }
+    }
+  }
+}

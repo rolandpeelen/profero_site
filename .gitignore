@@ -1,0 +1,9 @@
+.env.*.php
+.env.php
+.DS_Store
+Thumbs.db
+.idea/
+*.iml
+.sass-cache
+node_modules
+bower_components/
