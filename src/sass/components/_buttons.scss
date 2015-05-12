@@ -17,6 +17,7 @@
   border: 1px solid $sc-lilia;
   white-space: nowrap;
   @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $border-radius-base);
+  padding-bottom: 12px;
   @include user-select(none);
   @include transition(all 0.3s $epic-playful-easing);
   font-weight: 600;
@@ -90,7 +91,10 @@
 .btn-sm,
 .btn-xs {
   // line-height: ensure proper height of button next to small input
-  @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $border-radius-small);
+    padding: $padding-small-vertical $padding-small-horizontal, 7px;
+    font-size: $font-size-small;
+    line-height: $line-height-small;
+    border-radius: 25px;
 }
 .btn-xs {
   padding: 1px 5px;

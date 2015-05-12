@@ -8,6 +8,7 @@ angular.module('proferoSite')
         descriptionLarge: 'Back in 2005 we developed a piece of software for the dutch police that will help them manage their software licences.' +
         'The police then consisted of 26 different regions and our system made sure all of their licenses were managemed from one spot',
         tagline: 'We\'ve got you covered',
+        partners: '',
         categories: 'Software, Design',
         image: 'dist/assets/img/politie.jpg',
         link: ''
@@ -19,6 +20,7 @@ angular.module('proferoSite')
         'show their customers the shirt they configured, we used 3d visualisations. This meant we were able to be much more flexible in our approach and made sure' +
         'the system was future-proof.',
         tagline: 'What a time to live',
+        partners: 'Peppr',
         categories: 'Software, Design',
         image: 'dist/assets/img/slimFitted.jpg',
         link: 'http://slimfitted.com/designer'
@@ -30,6 +32,7 @@ angular.module('proferoSite')
         'but also took the opportunity to build a custom and realtime bookingsystem. Contrary to other systems, this one works realtime. If one user clicks a chair, it immediatly' +
         'pops up as temporarily reserved on the page of all other active users.',
         tagline: 'Booking like a pro. that sounds good',
+        partners: '',
         categories: 'Software, Design',
         image: 'dist/assets/img/bachkoorBooking.jpg',
         link: 'http://rolandpeelen.com/devcenter/bachkoor_booking'

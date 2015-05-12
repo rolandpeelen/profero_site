@@ -7,7 +7,6 @@
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba($main-dark, 1);
   @include opacity(0);
   @include transition(all 0.3s ease-in-out, opacity 0.25s ease-in);
   @include transform(translateY(100%));
@@ -18,26 +17,53 @@
     position: absolute;
     top: 0;
     width: 100%;
-    min-height: 50vh;
-    background-position: center center;
+    height: 20%;
+    background-position: center top;
     background-size: cover;
+    text-align: center;
+    filter: grayscale(100%);
+    @include transition(all 0.3s ease-in-out);
+    i.fa{
+      filter: grayscale(0%);
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      font-size: 60px;
+      width: 60px;
+      height: 60px;
+      color: $profero-orange--light;
+      @include opacity(0.5);
+      &:hover{
+        @include opacity(1);
+        cursor: pointer;
+        color: $profero-orange--dark;
+      }
+    }
     &:after{
+      pointer-events: none;
       width: 100%;
       height: 100%;
       @include vertical-gradient(rgba(0,0,0,0), rgba(0,0,0,0.4));
       content: '';
       position: absolute;
+      left: 0;
+      right: 0;
     }
   }
   .overlay{
-    overflow-y: auto;
+    background-color: rgba($main-dark, 1);
+    border-top: 15px solid $profero-orange--dark;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     position: absolute;
     z-index: 10;
     bottom: 0;
     width: 100%;
-    min-height: 50%;
-    height: 50%;
+    min-height: 50vh;
+    height: 80%;
     text-align: center;
+    @include transition(all 0.3s 0.1s ease-in-out);
 
     h2{
       @include transition(all 0.3s 0.3s ease-in-out);
@@ -64,14 +90,19 @@
       @include transition(all 0.3s 0.5s ease-in-out);
       @include transform(translateY(50px));
       text-align: center;
-      margin: 0 auto;
+      margin: 15px auto 0;
       color: rgba(#e6eff4, 0.5);
       @include opacity(0);
-      width: 50%;
-      padding-bottom: 25px;
-      border-bottom: 1px solid $sc-lilia;
+      &.categories{
+        border-bottom: 1px solid $sc-lilia;
+        padding-bottom: 25px;
+        width: 50%;
+      }
       &.animate--first{
         @include transition(all 0.3s 0.2s ease-in-out);
+        border-bottom: 0;
+        width: 100%;
+        padding-bottom: 10px;
       }
     }
     p{
@@ -80,39 +111,43 @@
       text-align: center;
       margin: 0 auto;
       color: rgba($sc-lilia, 1);
-      font-size: 1.8em;
-      line-height: 1.8em;
+      font-size: 1.2em;
+      line-height: 1.2em;
       font-weight: 300;
       @include opacity(0);
     }
     .project-info{
       background-color: $sc-stone;
-      padding: 100px;
+      padding: 50px;
+      display: block;
       width: 100%;
-      height: 100%;
       position: relative;
       margin: 0 auto;
       left: 0;
+      right:0;
       @include transition(all 0.2s $epic-playful-easing);
     }
     .project-description{
       width: 100%;
-      position: relative;
+      display: block;
       margin: 0 auto;
-      padding: 100px;
+      padding: 50px;
       right: 0;
       top: 0;
       @include transition(all 0.2s $epic-playful-easing);
     }
     .close-project-button{
-      position: absolute;
+      position: relative;
       top: 80%;
       bottom: auto;
       left: 0;
       right: 0;
       width: 200px;
-      margin: auto;
+      margin: auto auto 50px auto;
       @include transform(translateY(0px));
+    }
+    .go-to-project-button{
+      margin-top: 25px;
     }
   }
 
@@ -127,13 +162,48 @@
     h2, p{
       @include opacity(1);
     }
+    h4{
+      @include opacity(0.8);
+    }
+  }
+
+  &.viewing-image{
+    .overlay{
+      @include transform(translateY(100%));
+    }
+    .project-image{
+      height: 100%;
+      filter: grayscale(0%);
+      background-color: $sc-jet;
+    }
   }
 
   @media only screen and (min-width: $lap){
     .overlay{
-      height: 375px;
+      height: 75%;
+    }
+    .project-image{
+      height: 30%;
+    }
+  }
+  @media only screen and (min-width: $desk){
+    .project-image{
+      height: 25%;
+    }
+    .overlay{
+      overflow-y: auto;
+      height: 75%;
       text-align: left;
       h2, h4, h6, p{
+        text-align: left;
+        border-bottom: 0;
+        width: auto;
+      }
+      p{
+        font-size: 1.6em;
+        line-height: 1.6em;
+      }
+      h6.categories{
         text-align: left;
         border-bottom: 0;
         width: auto;
@@ -142,22 +212,36 @@
         position: absolute;
         left: 0;
         width: 35%;
+        height: 100%;
+        margin: 0;
       }
       .project-description{
         position: absolute;
         right: 0;
         width: 65%;
       }
-    }
-  }
-  @media only screen and (min-width: $desk){
-    .overlay{
-      height: 400px;
+      .close-project-button{
+        margin: auto;
+        position: absolute;
+      }
     }
   }
   @media only screen and (min-width: $wall){
+    .project-image{
+      height: 50%;
+    }
     .overlay{
-      height: 500px;
+      height: 50%;
+      p{
+        font-size: 1.8em;
+        line-height: 1.8em;
+      }
+      .project-info{
+        padding: 50px 75px;
+      }
+      .project-description{
+        padding: 50px 75px;
+      }
     }
   }
 }

@@ -29,21 +29,21 @@
             <span class="icon"><i class="fa fa-chevron-circle-right"></i></span>
         </a>
     </div>
-    <span class="project-image">
-        <img ng-src="{{ :: project.image}}" alt=""/>
-    </span>
+    <span class="project-image" style="background-image: url({{:: project.image}});"></span>
 </div>
 <!-- Project Repeater -->
 
-<div class="projectDrawer" ng-class="{'active' : isProjectDrawerActive()}">
+<div class="projectDrawer" ng-class="{'active' : isProjectDrawerActive(), 'viewing-image' : viewImage}">
     <div class="overlay">
         <span class="project-info">
             <h6 class="futura animate--first">Project Info</h6>
             <h2 class="tisa">{{activeProject.name}}</h2>
-        <h4 class="futura bolder">{{activeProject.descriptionSmall}}</h4>
-        <h4 class="futura">{{activeProject.tagline}}</h4>
-        <h6 class="futura">{{activeProject.categories}}</h6>
-            <a class="prof-btn-secondary btn btn-sm go-to-project-button" target="_blank" ng-href="{{ activeProject.link }}">
+            <h4 class="futura bolder">{{activeProject.descriptionSmall}}</h4>
+            <h4 class="futura">{{activeProject.tagline}}</h4>
+            <h6 class="futura" ng-hide="!activeProject.partners">Partners: {{activeProject.partners}}</h6>
+            <h6 class="futura categories">Categories: {{activeProject.categories}}</h6>
+            <a class="prof-btn-secondary btn btn-sm go-to-project-button" target="_blank"
+               ng-href="{{ activeProject.link }}" ng-if="activeProject.link">
                 <span class="text">Go To Project</span>
                 <span class="icon"><i class="fa fa-chevron-circle-right"></i></span>
             </a>
@@ -57,5 +57,8 @@
             <span class="icon"><i class="fa fa-times-circle"></i></span>
         </a>
     </div>
-    <span class="project-image" style="background-image: url({{activeProject.image}});"></span>
+    <span class="project-image" style="background-image: url({{activeProject.image}});" ng-click="viewImage = !viewImage">
+        <i class="fa fa-expand" ng-show="!viewImage"></i>
+        <i class="fa fa-compress" ng-show="viewImage"></i>
+    </span>
 </div>
