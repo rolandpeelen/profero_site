@@ -6,7 +6,7 @@ angular.module('proferoSite')
         name: 'LIPS',
         descriptionSmall: 'An epic software licensing system used by the dutch Police all over our beautiful little nether regions ',
         descriptionLarge: 'Back in 2005 we developed a piece of software for the dutch police that will help them manage their software licences.' +
-        'The police then consisted of 26 different regions and our system made sure all of their licenses were managemed from one spot',
+        'The police then consisted of 26 different regions and our system made sure all of their licenses were managed from one spot',
         tagline: 'We\'ve got you covered',
         partners: '',
         categories: 'Software, Design',
