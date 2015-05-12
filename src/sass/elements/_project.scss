@@ -2,13 +2,16 @@
   position: relative;
   overflow: hidden;
   height: 375px;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   .project-image{
     z-index:0;
     position: absolute;
     top: 0;
     width: 100%;
-    filter: grayscale(100%);
+    //filter: grayscale(100%);
+    img{
+      width: 100%;
+    }
   }
   .overlay{
     position: relative;
@@ -18,7 +21,6 @@
     padding: 50px 0;
     text-align: center;
     background-color: rgba($main-dark, 0.9);
-
     h2{
       vertical-align: middle;
       text-align: center;

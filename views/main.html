@@ -15,37 +15,47 @@
     <h2 class="tisa">Some of our projects</h2>
 </div>
 
-<div class="project">
+<!-- Project Repeater -->
+<div class="project" ng-repeat="project in projects">
     <div class="overlay">
         <span class="project-info">
-            <h2 class="tisa">LIPS</h2>
-        <h4 class="futura bolder">An epic software licensing system used by the dutch Police all over our beautiful
-            little
-            nether-regions?</h4>
-        <h4 class="futura">We’ve got you covered!</h4>
-        <h6 class="futura">Software - Design</h6>
+            <h2 class="tisa">{{ :: project.name}}</h2>
+        <h4 class="futura bolder">{{ :: project.descriptionSmall}}</h4>
+        <h4 class="futura">{{ :: project.tagline}}</h4>
+        <h6 class="futura">{{ :: project.categories}}</h6>
         </span>
-        <a class="btn prof-btn-secondary btn open-project-button">
+        <a class="btn prof-btn-secondary btn open-project-button" ng-click="openProject(project)">
             <span class="text">Open Project</span>
             <span class="icon"><i class="fa fa-chevron-circle-right"></i></span>
         </a>
     </div>
-    <img src="dist/assets/img/politie.jpg" alt="" class="project-image"/>
+    <span class="project-image">
+        <img ng-src="{{ :: project.image}}" alt=""/>
+    </span>
 </div>
+<!-- Project Repeater -->
 
-<div class="project">
+<div class="projectDrawer" ng-class="{'active' : isProjectDrawerActive()}">
     <div class="overlay">
         <span class="project-info">
-            <h2 class="tisa">SlimFitted</h2>
-        <h4 class="futura bolder">A SlimFitted product configurator as a solution to build your own SlimFitted
-            shirts?</h4>
-        <h4 class="futura">What a time to live!</h4>
-            <h6 class="futura">Design</h6>
+            <h6 class="futura animate--first">Project Info</h6>
+            <h2 class="tisa">{{activeProject.name}}</h2>
+        <h4 class="futura bolder">{{activeProject.descriptionSmall}}</h4>
+        <h4 class="futura">{{activeProject.tagline}}</h4>
+        <h6 class="futura">{{activeProject.categories}}</h6>
+            <a class="prof-btn-secondary btn btn-sm go-to-project-button" target="_blank" ng-href="{{ activeProject.link }}">
+                <span class="text">Go To Project</span>
+                <span class="icon"><i class="fa fa-chevron-circle-right"></i></span>
+            </a>
         </span>
-        <a class="btn prof-btn-secondary btn open-project-button">
-            <span class="text">Open Project</span>
-            <span class="icon"><i class="fa fa-chevron-circle-right"></i></span>
+        <span class="project-description">
+            <h6 class="futura animate--first">Project description</h6>
+            <p class="futura"> {{activeProject.descriptionLarge}}</p>
+        </span>
+        <a class="btn prof-btn-secondary btn close-project-button" ng-click="closeProject()">
+            <span class="text">Close Project</span>
+            <span class="icon"><i class="fa fa-times-circle"></i></span>
         </a>
     </div>
-    <img src="dist/assets/img/slimFitted.jpg" alt="" class="project-image"/>
+    <span class="project-image" style="background-image: url({{activeProject.image}});"></span>
 </div>

@@ -1,38 +1,5 @@
 'use strict';
 
-angular.module('proferoSite', [
-  'ui.router',
-  'cgBusy'
-]).config(function ($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise('/home');
-  $stateProvider
-      .state('home', {
-        url: '/home',
-        views: {
-          'MainView': {
-            templateUrl: 'views/main.html',
-            controller: 'MainCtrl'
-          }
-        }
-      });
-}).value('cgBusyDefaults',
-    {
-      message: 'Laden...',
-      backdrop: 'true',
-      templateUrl: 'views/angular-busy.html'
-
-    }).run(function () {
-      //Attach Fastclick to body
-      FastClick.attach(document.body);
-
-      //Add noTouch class for mobile
-      if (!('ontouchstart' in document.documentElement)) {
-        document.documentElement.className += 'no-touch';
-      }
-
-    });
-'use strict';
-
 angular.module('proferoSite')
     .constant('PROJECTCONSTANT', {
       1: {
@@ -68,23 +35,3 @@ angular.module('proferoSite')
         link: 'http://rolandpeelen.com/devcenter/bachkoor_booking'
       }
     });
-'use strict';
-
-angular.module('proferoSite').controller('MainCtrl', ['$scope', 'PROJECTCONSTANT', function ($scope, PROJECTCONSTANT) {
-  $scope.projects = PROJECTCONSTANT;
-  $scope.activeProject = PROJECTCONSTANT[1];
-  var projectDrawerActive = false;
-
-  $scope.openProject = function(project){
-    $scope.activeProject = project;
-    projectDrawerActive = true;
-  };
-
-  $scope.closeProject = function(){
-    projectDrawerActive = false;
-  };
-
-  $scope.isProjectDrawerActive = function(){
-    return projectDrawerActive;
-  }
-}]);
