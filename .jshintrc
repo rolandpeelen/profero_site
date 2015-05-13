@@ -18,5 +18,5 @@
     "trailing": true,
     "smarttabs": true,
     "jquery": true,
-  "globals": { "angular": false, "FastClick": false, "_": false, "syncOrders": false }
+  "globals": { "angular": false, "FastClick": false, "_": false, "syncOrders": false, "google":false }
 }

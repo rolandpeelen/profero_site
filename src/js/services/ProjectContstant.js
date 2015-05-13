@@ -17,7 +17,7 @@ angular.module('proferoSite')
         name: 'SlimFitted',
         descriptionSmall: 'A slim product configurator for the masses, built to configure your own SlimFitted shirt.',
         descriptionLarge: 'In 2014 we teamed up with the guys from SlimFitted to work on a revolutionary product configurator. Instead of using photographs to ' +
-        'show their customers the shirt they configured, we used 3d visualisations. This meant we were able to be much more flexible in our approach and made sure' +
+        'show their §customers the shirt they configured, we used 3d visualisations. This meant we were able to be much more flexible in our approach and made sure' +
         'the system was future-proof.',
         tagline: 'What a time to live',
         partners: 'Peppr',
