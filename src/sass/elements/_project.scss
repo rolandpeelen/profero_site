@@ -96,6 +96,11 @@
   }
   @media only screen and (min-width: $desk){
     height: 400px;
+    width: 50%;
+    float: left;
+    &:nth-child(odd){
+      border-right: 5px solid $sc-lilia;
+    }
     .overlay{
       height: 400px;
       padding: 150px 0;
@@ -106,11 +111,7 @@
   }
   @media only screen and (min-width: $wall){
     height: 500px;
-    width: 50%;
-    float: left;
-    &:nth-child(odd){
-      border-right: 5px solid $sc-lilia;
-    }
+
     .overlay{
       height: 500px;
       padding: 200px 0;

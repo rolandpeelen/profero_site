@@ -18,16 +18,9 @@
     margin: 30px auto;
     color: #e6eff4;
   }
-  @media only screen and (min-width: $lap){
+
+  @media only screen and (min-width: $wall){
     height: 700px;
     padding: 250px 0;
-  }
-  @media only screen and (min-width: $desk){
-    height: 800px;
-    padding: 300px 0;
-  }
-  @media only screen and (min-width: $wall){
-    height: 900px;
-    padding: 400px 0;
   }
 }
