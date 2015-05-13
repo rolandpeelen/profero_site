@@ -56,6 +56,7 @@
       width: 90%;
       position: absolute;
       margin: 0 auto;
+      top:20%;
       left: 0;
       right: 0;
       @include transition(all 0.2s $epic-playful-easing);
@@ -104,6 +105,9 @@
     .overlay{
       height: 400px;
       padding: 150px 0;
+      .project-info{
+        top:20%;
+      }
       .open-project-button{
         bottom: 75px;
       }
