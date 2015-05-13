@@ -69,6 +69,18 @@ angular.module('proferoSite')
         categories: 'Software, Design',
         image: 'dist/assets/img/bachkoorBooking.jpg',
         link: 'http://rolandpeelen.com/devcenter/bachkoor_booking'
+      },
+      4: {
+        name: 'Gemeente Utrecht',
+        descriptionSmall: 'The municipality of Utrecht hired us to do the mangement of an IT Project',
+        descriptionLarge: 'In 2015 the \'Bachkoor Nijmegen\' asked us to built a new website to help create a more youthful image. We not only help them with their site' +
+        'but also took the opportunity to build a custom and realtime bookingsystem. Contrary to other systems, this one works realtime. If one user clicks a chair, it immediatly' +
+        'pops up as temporarily reserved on the page of all other active users.',
+        tagline: 'Managers ahoy',
+        partners: '',
+        categories: 'Software, Project Management',
+        image: 'dist/assets/img/bachkoorBooking.jpg',
+        link: ''
       }
     });
 'use strict';

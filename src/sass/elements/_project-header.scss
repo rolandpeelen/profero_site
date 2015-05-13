@@ -1,21 +1,32 @@
 .project-header{
   height: 150px;
-  padding: 60px 0;
+  padding: 30px 0;
   background-color: $sc-lilia;
+  text-align: center;
   h2{
-    text-align: center;
     color: $main-dark;
+    margin: 0 auto;
+    width: 50%;
+    padding: 30px 0 35px;
+    border-top: 1px solid $sc-amber-old;
+    border-bottom: 1px solid $sc-amber-old;
+    @media(-webkit-min-device-pixel-ratio: 2){
+      border-width: 0.5px;
+    }
   }
   @media only screen and (min-width: $lap){
     height: 200px;
-    padding: 82px 0;
+    padding: 50px 0;
+    h2{
+      width: 25%;
+    }
   }
   @media only screen and (min-width: $desk){
     height: 220px;
-    padding: 85px 0;
+    padding: 60px 0;
   }
   @media only screen and (min-width: $wall){
     height: 250px;
-    padding: 100px 0;
+    padding: 70px 0;
   }
 }

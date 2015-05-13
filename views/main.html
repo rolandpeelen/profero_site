@@ -15,23 +15,26 @@
     <h2 class="tisa">Some of our projects</h2>
 </div>
 
-<!-- Project Repeater -->
-<div class="project" ng-repeat="project in projects">
-    <div class="overlay">
+
+<div class="project-container">
+    <!-- Project Repeater -->
+    <div class="project" ng-repeat="project in projects">
+        <div class="overlay">
         <span class="project-info">
             <h2 class="tisa">{{ :: project.name}}</h2>
         <h4 class="futura bolder">{{ :: project.descriptionSmall}}</h4>
         <h4 class="futura">{{ :: project.tagline}}</h4>
         <h6 class="futura">{{ :: project.categories}}</h6>
         </span>
-        <a class="btn prof-btn-secondary btn open-project-button" ng-click="openProject(project)">
-            <span class="text">Open Project</span>
-            <span class="icon"><i class="fa fa-chevron-circle-right"></i></span>
-        </a>
+            <a class="btn prof-btn-secondary btn open-project-button" ng-click="openProject(project)">
+                <span class="text">Open Project</span>
+                <span class="icon"><i class="fa fa-chevron-circle-right"></i></span>
+            </a>
+        </div>
+        <span class="project-image" style="background-image: url({{:: project.image}});"></span>
     </div>
-    <span class="project-image" style="background-image: url({{:: project.image}});"></span>
+    <!-- Project Repeater -->
 </div>
-<!-- Project Repeater -->
 
 <div class="projectDrawer" ng-class="{'active' : isProjectDrawerActive(), 'viewing-image' : viewImage}">
     <div class="overlay">
