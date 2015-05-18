@@ -37,10 +37,10 @@ angular.module('proferoSite')
     .constant('PROJECTCONSTANT', {
       1: {
         name: 'LIPS',
-        descriptionSmall: 'An epic software licensing system used by the dutch Police all over our beautiful little nether regions ',
-        descriptionLarge: 'Back in 2005 we developed a piece of software for the dutch police that will help them manage their software licences.' +
-        'The police then consisted of 26 different regions and our system made sure all of their licenses were managed from one spot',
-        tagline: 'We\'ve got you covered',
+        descriptionSmall: 'Landelijke Inventarisatie Politie Systemen. A software license management system in use by the Dutch Police.',
+        descriptionLarge: 'In assignment of the Dutch Police we are constantly developing and maintaining parts of the LIPS system. The Dutch Police has been using LIPS ever since 2006 in order to consolidate and optimize their wide variety of software packages nation wide.' +
+        'The Netherlands has as many as 26 different Police departments that used to select and license sofware packages autonomously from one another. Using LIPS, license management is now centralized and the Police\'s software wheelpark is getting more efficient every year.' ,
+        tagline: 'Building durable and scalable software',
         partners: '',
         categories: 'Software, Design',
         image: 'dist/assets/img/politie.jpg',
@@ -48,11 +48,11 @@ angular.module('proferoSite')
       },
       2: {
         name: 'SlimFitted',
-        descriptionSmall: 'A slim product configurator for the masses, built to configure your own SlimFitted shirt.',
-        descriptionLarge: 'In 2014 we teamed up with the guys from SlimFitted to work on a revolutionary product configurator. Instead of using photographs to ' +
-        'show their §customers the shirt they configured, we used 3d visualisations. This meant we were able to be much more flexible in our approach and made sure' +
-        'the system was future-proof.',
-        tagline: 'What a time to live',
+        descriptionSmall: 'An online dress shirt product configurator, enabling clients to configure their next tailored shirt.',
+        descriptionLarge: 'In 2014 we teamed up with the people at SlimFitted to work on a revolutionary product configurator. Instead of using photographs to ' +
+        'show their customers the shirt they configured, we used 3d visualisations based on a 3d model. Doing so provided the required flexibility to build a ' +
+        'future-proof online product configurator.',
+        tagline: 'Developing the next generation of online apps',
         partners: 'Peppr',
         categories: 'Software, Design',
         image: 'dist/assets/img/slimFitted.jpg',
@@ -60,11 +60,11 @@ angular.module('proferoSite')
       },
       3: {
         name: 'Bachkoor Booking',
-        descriptionSmall: 'A realtime bookingsystem. Instantly see when others book chairs, save your seats while you\'re away',
-        descriptionLarge: 'In 2015 the \'Bachkoor Nijmegen\' asked us to built a new website to help create a more youthful image. We not only help them with their site' +
-        'but also took the opportunity to build a custom and realtime bookingsystem. Contrary to other systems, this one works realtime. If one user clicks a chair, it immediatly' +
-        'pops up as temporarily reserved on the page of all other active users.',
-        tagline: 'Booking like a pro. that sounds good',
+        descriptionSmall: 'A realtime booking system showing you the real availability of seats.',
+        descriptionLarge: 'In 2015 \'Bachkoor Nijmegen\' asked us to built a new website to support a more youthful image. We not only helped them with their website,' +
+        'but also took the opportunity to build them a next generation realtime seat booking app. Contrary to other booking apps, this one works in realtime. If one user clicks a chair, it\'s immediately' +
+        'blocked out in all other users\'s web browsers.',
+        tagline: 'Working with cutting edge realtime technology',
         partners: '',
         categories: 'Software, Design',
         image: 'dist/assets/img/bachkoorBooking.jpg',
@@ -72,11 +72,9 @@ angular.module('proferoSite')
       },
       4: {
         name: 'Gemeente Utrecht',
-        descriptionSmall: 'The municipality of Utrecht hired us to do the mangement of an IT Project',
-        descriptionLarge: 'In 2015 the \'Bachkoor Nijmegen\' asked us to built a new website to help create a more youthful image. We not only help them with their site' +
-        'but also took the opportunity to build a custom and realtime bookingsystem. Contrary to other systems, this one works realtime. If one user clicks a chair, it immediatly' +
-        'pops up as temporarily reserved on the page of all other active users.',
-        tagline: 'Managers ahoy',
+        descriptionSmall: 'The municipality of Utrecht hired us to help manage one of their large scale IT projects.',
+        descriptionLarge: '(...)',
+        tagline: 'Making your projects more manageable!',
         partners: '',
         categories: 'Software, Project Management',
         image: 'dist/assets/img/bachkoorBooking.jpg',
@@ -118,7 +116,7 @@ angular.module('proferoSite').controller('MainCtrl', ['$scope', 'PROJECTCONSTANT
     };
 
     // Display a map on the page
-    map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+    map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
     map.setTilt(45);
     map.scrolling = false;
 
@@ -132,7 +130,7 @@ angular.module('proferoSite').controller('MainCtrl', ['$scope', 'PROJECTCONSTANT
     var infoWindowContent = [
       ['<div class="info_content">' +
       '<h4>Profero Wijchen</h4>' +
-      '</div>']
+      '</div>'],
       ['<div class="info_content">' +
       '<h4>Profero Amsterdam</h4>' +
       '</div>']
@@ -165,7 +163,7 @@ angular.module('proferoSite').controller('MainCtrl', ['$scope', 'PROJECTCONSTANT
 
     // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
 
-    var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
+    var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function() {
       this.setZoom(8);
       google.maps.event.removeListener(boundsListener);
     });
