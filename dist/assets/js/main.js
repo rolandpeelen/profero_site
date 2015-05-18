@@ -154,7 +154,7 @@ angular.module('proferoSite').controller('MainCtrl', ['$scope', 'PROJECTCONSTANT
         return function() {
           infoWindow.setContent(infoWindowContent[i][0]);
           infoWindow.open(map, marker);
-        }
+        };
       })(marker, i));
 
       // Automatically center the map fitting all markers on the screen
