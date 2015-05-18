@@ -47,7 +47,7 @@ angular.module('proferoSite').controller('MainCtrl', ['$scope', 'PROJECTCONSTANT
     var infoWindowContent = [
       ['<div class="info_content">' +
       '<h4>Profero Wijchen</h4>' +
-      '</div>']
+      '</div>'],
       ['<div class="info_content">' +
       '<h4>Profero Amsterdam</h4>' +
       '</div>']
