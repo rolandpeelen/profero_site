@@ -33,7 +33,7 @@ angular.module('proferoSite').controller('MainCtrl', ['$scope', 'PROJECTCONSTANT
     };
 
     // Display a map on the page
-    map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+    map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
     map.setTilt(45);
     map.scrolling = false;
 
@@ -71,7 +71,7 @@ angular.module('proferoSite').controller('MainCtrl', ['$scope', 'PROJECTCONSTANT
         return function() {
           infoWindow.setContent(infoWindowContent[i][0]);
           infoWindow.open(map, marker);
-        }
+        };
       })(marker, i));
 
       // Automatically center the map fitting all markers on the screen
@@ -80,7 +80,7 @@ angular.module('proferoSite').controller('MainCtrl', ['$scope', 'PROJECTCONSTANT
 
     // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
 
-    var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
+    var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function() {
       this.setZoom(8);
       google.maps.event.removeListener(boundsListener);
     });
