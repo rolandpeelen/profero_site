@@ -5,10 +5,10 @@
 </div>
 
 <div class="info-quote">
-    <h1 class="tisa">Handcrafted beautiful software</h1>
+    <h1 class="tisa">Beautiful custom software</h1>
 
     <h1 class="tisa">That integrates with your business</h1>
-    <h4 class="futura">That’s how we roll</h4>
+    <h4 class="futura">That’s us</h4>
 </div>
 
 <div class="project-header">
@@ -60,7 +60,7 @@
             <span class="icon"><i class="fa fa-times-circle"></i></span>
         </a>
     </div>
-    <span class="project-image" style="background-image: url({{activeProject.image}});" ng-click="viewImage = !viewImage">
+    <span class="project-image" ng-style="{'background-image':'url(' + activeProject.image + ')'}" ng-click="viewImage = !viewImage">
         <i class="fa fa-expand" ng-show="!viewImage"></i>
         <i class="fa fa-compress" ng-show="viewImage"></i>
     </span>
@@ -73,8 +73,8 @@
 <div class="partners-section">
     <div class="left">
         <img src="dist/assets/img/forsa_logo.png" alt="" class="logo"/>
-        <h2 class="tisa">Training</h2>
-        <p class="futura">Every once in a while, our Project Managers are hired by Forsa to give a training. Our managers are PRINCE2 certified.</p>
+        <h3 class="tisa">Training</h3>
+        <p class="futura">We provide a variety of professional Management training programmes through our partner Forsa. Our managers are PRINCE2 certified.</p>
         <a class="btn prof-btn-primary btn-sm" target="_blank" href="http://www.forsa-advies.nl/">
             <span class="text">Visit Forsa</span>
             <span class="icon"><i class="fa fa-chevron-circle-right"></i></span>
@@ -82,8 +82,8 @@
     </div>
     <div class="right">
         <img src="dist/assets/img/peppr_logo.png" alt="" class="logo"/>
-        <h2 class="tisa">3d Visualisations</h2>
-        <p class="futura">We encounter projects that need visuals quite often. Whenever we do, we're working with Peppr to assure our quality standards are met</p>
+        <h3 class="tisa">3d Visualisations</h3>
+        <p class="futura">We regularly do projects that require digital visuals. Whenever we do, we work with Peppr to create high-end visuals and animations.</p>
         <a class="btn prof-btn-primary btn-sm" target="_blank" href="http://www.peppr.nl/">
             <span class="text">Visit Peppr</span>
             <span class="icon"><i class="fa fa-chevron-circle-right"></i></span>
@@ -117,7 +117,7 @@
         <p class="futura phone">
             <span class="icon"><i class="fa fa-phone"></i></span>
             <span class="text">
-                +31 20 8932 984
+                +31 (0)20 8932 984
             </span>
         </p>
     </div>
