@@ -1,12 +1,13 @@
 {
   "name": "profero_site",
-  "version": "0.0.1",
+  "version": "0.7.0",
   "authors": [
-    "RWJ Peelen <roland@peppr.nl>"
+    "RWJ Peelen <roland@peppr.nl>",
+    "PR Oldenzeel <peterpaul@peppr.nl"
   ],
-  "description": "configurator made in threeJS",
+  "description": "Profero Website",
   "main": "bower",
-  "license": "MIT",
+  "license": "",
   "homepage": "http://www.peppr.nl",
   "private": true,
   "ignore": [
