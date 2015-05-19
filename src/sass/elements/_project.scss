@@ -78,7 +78,7 @@
       &:hover{
         .project-info{
           @include opacity(0.5);
-          @include transform(translateY(-60px));
+          @include transform(translateY(-20px));
         }
         .open-project-button{
           @include opacity(1);

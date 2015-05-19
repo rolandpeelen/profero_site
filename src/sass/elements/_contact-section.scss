@@ -27,7 +27,7 @@
       position: relative;
       display: block;
       height: 5em;
-      &.phone{
+      &.phone, &.mail{
         height: 1.5em;
         .icon{
           height: 1.5em;
@@ -41,6 +41,10 @@
         padding-left: 20px;
         top: 0;
         color: $sc-amber;
+        a{
+          color: $sc-amber;
+
+        }
       }
       .icon{
         position: absolute;
