@@ -62,7 +62,7 @@ angular.module('proferoSite')
         name: 'Bachkoor Booking',
         descriptionSmall: 'A realtime booking system showing you the real availability of seats.',
         descriptionLarge: 'In 2015 \'Bachkoor Nijmegen\' asked us to built a new website to support a more youthful image. We not only helped them with their website,' +
-        'but also took the opportunity to build them a next generation realtime seat booking app. Contrary to other booking apps, this one works in realtime. If one user clicks a chair, it\'s immediately' +
+        'but also took the opportunity to build them a next generation realtime seat booking app. Contrary to other booking apps, this one works in realtime. If one user clicks a chair, it\'s immediately ' +
         'blocked out in all other users\'s web browsers.',
         tagline: 'Working with cutting edge realtime technology',
         partners: '',
