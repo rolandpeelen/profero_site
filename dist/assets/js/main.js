@@ -72,8 +72,9 @@ angular.module('proferoSite')
       4: {
         name: 'Gemeente Utrecht',
         descriptionSmall: 'Implementating software for the municipality of Utrecht.',
-        descriptionLarge: 'We did the functional and technical implementation of a publication system for the public site of the municipality of Utrecht' +
-        'The system, externally hosted and supplied by Cap Gemini / MSI consists of three modules (Babs, BabsOnline and iBabs). It meant proper teamwork was necessary between business and technical project managers, supplier (Cap / MSI), key users, technical specialists and functional managers.',
+        descriptionLarge: 'We managed the technical and functional implementation of a publication system meant to be on the public site of the municipality of Utrecht. ' +
+        'The system, externally hosted and supplied by Cap Gemini / MSI consists of three modules (Babs, BabsOnline and iBabs). Proper teamwork was necessary between business and technical project managers, supplier (Cap / MSI), key users, technical specialists and functional managers. We made ' +
+        'sure things went according to plan.',
         tagline: 'Municipality Management',
         partners: '',
         categories: 'Software, Project Management',
