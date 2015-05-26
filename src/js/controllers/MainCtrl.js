@@ -7,13 +7,11 @@ angular.module('proferoSite').controller('MainCtrl', ['$scope', 'PROJECTCONSTANT
 
   $scope.openProject = function(project){
     $scope.activeProject = project;
-    $rootScope.noScrolling = true;
     projectDrawerActive = true;
   };
 
   $scope.closeProject = function(){
     projectDrawerActive = false;
-    $rootScope.noScrolling = false;
   };
 
   $scope.isProjectDrawerActive = function(){
