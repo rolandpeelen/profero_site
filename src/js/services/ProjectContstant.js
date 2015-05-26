@@ -39,7 +39,7 @@ angular.module('proferoSite')
       4: {
         name: 'Gemeente Utrecht',
         descriptionSmall: 'Managing a software implementation project for the municipality of Utrecht.',
-        descriptionLarge: 'The municipality of Utrecht asked us to manage the technical and functional implementation of a publication system on their public website. ' +
+        descriptionLarge: 'In 2014 the municipality of Utrecht asked us to manage the technical and functional implementation of a publication system on their public website. ' +
         'The system consists of three modules (Babs, BabsOnline and iBabs), externally hosted and supplied by Cap Gemini / MSI. The project required intensive team work between business and technical project managers, the supplier (Cap / MSI), key users, technical specialists and functional managers. We made ' +
         'sure the project went according to plan.',
         tagline: 'Partner in Interim Management',
@@ -47,5 +47,27 @@ angular.module('proferoSite')
         categories: 'Software, Project Management',
         image: 'dist/assets/img/utrecht.jpg',
         link: 'http://utrecht.nl'
+      },
+      5: {
+        name: 'Cyber Crime Programme',
+        descriptionSmall: 'Project management and consulting on several crucial Cyber Crime projects.',
+        descriptionLarge: 'In 2010 the Dutch Police requested Profero to help with the project initiation, implementation and management of several IT projects crucial to digital innovations within the Cyber Crime department. ' +
+        'IT innovation is key to the department\'s ability to fight cyber crime. Projects included \'E-mail Analysis\', \'Client-Server\' and \'VMWare ESX\'. ',
+        tagline: 'Managing key innovation projects',
+        partners: '',
+        categories: 'Software, Project Management',
+        image: 'dist/assets/img/535.jpg',
+        link: ''
+      },
+      6: {
+        name: 'Storage Digital Evidence',
+        descriptionSmall: 'Evaluating an innovative IT project at the Dutch Police.',
+        descriptionLarge: 'The Dutch Police requested Profero to help with the evaluation of the Storage Digital Evidence project. ' +
+        'We assessed the project\'s process and results by means of PRINCE2 standards.',
+        tagline: 'Assessing project results',
+        partners: '',
+        categories: 'Software, Project Management, PRINCE2',
+        image: 'dist/assets/img/262.jpg',
+        link: ''
       }
     });
