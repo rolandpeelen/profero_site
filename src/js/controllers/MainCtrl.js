@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('proferoSite').controller('MainCtrl', ['$scope', 'PROJECTCONSTANT', '$rootScope', function ($scope, PROJECTCONSTANT, $rootScope) {
+angular.module('proferoSite').controller('MainCtrl', ['$scope', 'PROJECTCONSTANT', '$rootScope', function ($scope, PROJECTCONSTANT) {
   $scope.projects = PROJECTCONSTANT;
   $scope.activeProject = PROJECTCONSTANT[1];
   var projectDrawerActive = false;
