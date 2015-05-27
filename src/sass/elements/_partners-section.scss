@@ -1,10 +1,9 @@
 .partners-section{
   background-color: lighten($sc-amber, 3%);
   position: relative;
-  .left, .right{
+  .left, .right, .middle{
     width: 100%;
     text-align: center;
-    border-bottom: 2px solid $sc-lilia;
     padding: 30px;
     img.logo{
       width: 35%;
@@ -13,12 +12,20 @@
   }
 
   @media only screen and (min-width: $lap){
-    .left, .right{
-      width: 50%;
+    .left, .middle, .right{
+      width: 33%;
       padding: 50px;
     }
     .left{
       border-right: 5px solid $sc-lilia;
+    }
+    .middle{
+      border-right: 5px solid $sc-lilia;
+      position: absolute;
+      margin: 0 auto;
+      top: 0;
+      left: 0;
+      right: 0;
     }
     .right{
       position: absolute;
@@ -27,12 +34,12 @@
     }
   }
   @media only screen and (min-width: $desk){
-    .left, .right{
+    .left, .right, .middle{
       padding: 80px;
     }
   }
   @media only screen and (min-width: $wall){
-    .left, .right{
+    .left, .right, .middle{
       padding: 100px;
       img.logo{
         width: 25%;
