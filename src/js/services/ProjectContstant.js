@@ -11,6 +11,7 @@ angular.module('proferoSite')
         partners: '',
         categories: 'Software, Design',
         image: 'dist/assets/img/politie.jpg',
+        imagePreview: 'dist/assets/img/politiePreview.jpg',
         link: ''
       },
       2: {
@@ -22,6 +23,7 @@ angular.module('proferoSite')
         partners: 'Peppr',
         categories: 'Software, Design',
         image: 'dist/assets/img/slimFitted.jpg',
+        imagePreview: 'dist/assets/img/slimFittedPreview.jpg',
         link: 'http://slimfitted.com/designer'
       },
       3: {
@@ -34,6 +36,7 @@ angular.module('proferoSite')
         partners: '',
         categories: 'Software, Design',
         image: 'dist/assets/img/bachkoorBooking.jpg',
+        imagePreview: 'dist/assets/img/bachkoorBookingPreview.jpg',
         link: 'http://rolandpeelen.com/devcenter/bachkoor_booking'
       },
       4: {
@@ -46,6 +49,7 @@ angular.module('proferoSite')
         partners: '',
         categories: 'Software, Project Management',
         image: 'dist/assets/img/utrecht.jpg',
+        imagePreview: 'dist/assets/img/utrechtPreview.jpg',
         link: 'http://utrecht.nl'
       },
       5: {
@@ -57,6 +61,7 @@ angular.module('proferoSite')
         partners: '',
         categories: 'Software, Project Management',
         image: 'dist/assets/img/535.jpg',
+        imagePreview: 'dist/assets/img/535Preview.jpg',
         link: ''
       },
       6: {
@@ -68,6 +73,7 @@ angular.module('proferoSite')
         partners: '',
         categories: 'Software, Project Management, PRINCE2',
         image: 'dist/assets/img/262.jpg',
+        imagePreview: 'dist/assets/img/262Preview.jpg',
         link: ''
       }
     });
