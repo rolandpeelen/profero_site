@@ -21,7 +21,6 @@
     background-position: center top;
     background-size: cover;
     text-align: center;
-    filter: grayscale(100%);
     @include transition(all 0.3s ease-in-out);
     i.fa{
       filter: grayscale(0%);
