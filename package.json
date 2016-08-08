@@ -1,6 +1,6 @@
 {
   "name": "ProferoSite",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Profero Website",
   "main": "gulpfile.js",
   "scripts": {
