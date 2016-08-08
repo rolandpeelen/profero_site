@@ -109,8 +109,8 @@ gulp.task('clean', function(cb) {
     del(['dist/assets/css', 'dist/assets/js', 'dist/assets/img'], cb)
 });
 
-gulp.task('default', ['clean'], function() {
-    gulp.start('styles', 'scripts', 'vendor', 'images');
+gulp.task('default', function() {
+    gulp.start('clean', 'styles', 'scripts', 'vendor', 'images');
 });
 
 gulp.task('browser-sync', function() {
